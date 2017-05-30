@@ -22,6 +22,13 @@ body {
     border-left: 1px solid #e7e7e7;
   }
 }
+.navbar-header.sidebar-toggle {
+	float: left;
+    background-color: transparent;
+    background-image: none;
+    padding: 15px 15px;
+    font-family: fontAwesome;
+}
 .navbar-top-links {
   margin-right: 0;
 }
@@ -80,7 +87,7 @@ body {
 .sidebar ul li a.active {
   background-color: #eeeeee;
 }
-.sidebar .arrow {
+.sidebar .fa-plus {
   float: right;
 }
 .sidebar .fa.arrow:before {
