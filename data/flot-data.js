@@ -1122,8 +1122,8 @@ $(function() {
 
         while (data.length < maximum) {
             var previous = data.length ? data[data.length - 1] : 50;
-            var y = previous + Math.random() * 10 - 5;
-            data.push(y < 0 ? 0 : y > 100 ? 100 : y);
+            var y = previous + Math.random() *10 -5;
+            data.push(y < 30 ? 30 : y > 100 ? 100 : y);
         }
 
         // zip the generated y values with the x values
@@ -1141,7 +1141,7 @@ $(function() {
     series = [{
         data: getRandomData(),
         lines: {
-            fill: true
+            fill: false
         }
     }];
 
@@ -1181,7 +1181,7 @@ $(function() {
             }
         },
         yaxis: {
-            min: 30,
+            min: 0,
             max: 150
         },
         legend: {
