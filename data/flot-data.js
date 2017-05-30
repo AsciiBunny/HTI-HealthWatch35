@@ -1181,8 +1181,8 @@ $(function() {
             }
         },
         yaxis: {
-            min: 0,
-            max: 110
+            min: 30,
+            max: 150
         },
         legend: {
             show: true
