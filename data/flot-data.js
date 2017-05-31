@@ -8,8 +8,8 @@ $(document).ready(function() {
         var sin = [],
             cos = [];
         for (var i = 0; i < 12; i += 0.2) {
-            sin.push([i, Math.sin(i + offset)]);
-            cos.push([i, Math.cos(i + offset)]);
+            sin.push([i, Math.sin(i + offset)*10+75]);
+            cos.push([i, i-i]);
         }
 
         var options = {
@@ -25,8 +25,8 @@ $(document).ready(function() {
                 hoverable: true //IMPORTANT! this is needed for tooltip to work
             },
             yaxis: {
-                min: -1.2,
-                max: 1.2
+                min: 0,
+                max: 160
             },
             tooltip: true,
             tooltipOpts: {
@@ -40,10 +40,7 @@ $(document).ready(function() {
 
         var plotObj = $.plot($("#flot-line-chart"), [{
                 data: sin,
-                label: "sin(x)"
-            }, {
-                data: cos,
-                label: "cos(x)"
+                label: "Heart rate in BPM"
             }],
             options);
     }
