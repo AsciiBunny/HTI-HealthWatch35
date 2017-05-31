@@ -32,10 +32,12 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+	
 </head>
 
-<body>
+
+
+<body onload="startTime()">
 
     <div id="wrapper">
 
@@ -111,7 +113,7 @@
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="Settings.html"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -184,10 +186,23 @@
                     <h1 class="page-header">Time and Date</h1>
                 </div>
                 <!-- /.col-lg-12 -->
-
-            <H1>Time &emsp; &emsp; Date</H1>
-			<H2>03:36 <small>CEST</small> &emsp; 5 June</H2>
-
+			<div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+						It is now
+                        </div>
+                        <div class="panel-body">
+                            <p id="date"></p>
+<script>
+document.getElementById("date").innerHTML = Date();
+</script>		
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-4 -->
+		
         <!-- /#page-wrapper -->
 
     </div>

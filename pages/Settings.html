@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-    <meta charset="utf-8">
+  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -34,10 +32,8 @@
     <![endif]-->
 
 </head>
-
 <body>
-
-    <div id="wrapper">
+ <div id="wrapper">
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -177,20 +173,166 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
-
-        <div id="page-wrapper">
-            <div class="row">
+		
+	 <div id="page-wrapper">
+		<div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Body Temperature</h1>
+                    <h1 class="page-header">Settings</h1>
                 </div>
                 <!-- /.col-lg-12 -->
-            </div>
-			<IMG SRC="../Images/Thermometer.png" ALT="some text" WIDTH=50 HEIGHT=200>
-			<H2>37&deg;</H2>
-        </div>
-        <!-- /#page-wrapper -->
+				
+          <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+						Warning settings
+                        </div>
+                        <div class="panel-body">
+						Heart rate threshold:
+							<div style="position:relative; margin:auto; width:90%">
+							<span style="position:absolute; color:red; border:1px solid blue; min-width:100px;">
+							<span id="myValue"></span>
+							</span>
+							<input type="range" id="myRange" max="250" min="0" style="width:80%"> 
+							</div>
 
-    </div>
+							<script type="text/javascript" charset="utf-8">
+var myRange = document.querySelector('#myRange');
+var myValue = document.querySelector('#myValue');
+var myUnits = 'BPM';
+var off = myRange.offsetWidth / (parseInt(myRange.max) - parseInt(myRange.min));
+var px =  ((myRange.valueAsNumber - parseInt(myRange.min)) * off) - (myValue.offsetParent.offsetWidth / 2);
+
+  myValue.parentElement.style.left = px + 'px';
+  myValue.parentElement.style.top = myRange.offsetHeight + 'px';
+  myValue.innerHTML = myRange.value + ' ' + myUnits;
+
+  myRange.oninput =function(){
+    let px = ((myRange.valueAsNumber - parseInt(myRange.min)) * off) - (myValue.offsetWidth / 2);
+    myValue.innerHTML = myRange.value + ' ' + myUnits;
+    myValue.parentElement.style.left = px + 'px';
+  };
+							</script>
+							<br>
+							<br>
+							Upper Blood pressure threshold
+							<div style="position:relative; margin:auto; width:90%">
+							<span style="position:absolute; color:red; border:1px solid blue; min-width:100px;">
+							<span id="myValue1"></span>
+							</span>
+							<input type="range" id="myRange1" max="140" min="0" style="width:80%"> 
+							</div>
+
+							<script type="text/javascript" charset="utf-8">
+var myRange1 = document.querySelector('#myRange1');
+var myValue1 = document.querySelector('#myValue1');
+var myUnits1 = 'mm Hg';
+var off1 = myRange1.offsetWidth / (parseInt(myRange1.max) - parseInt(myRange1.min));
+var px1 =  ((myRange1.valueAsNumber - parseInt(myRange1.min)) * off1) - (myValue1.offsetParent.offsetWidth / 2);
+
+  myValue1.parentElement.style.left = px1 + 'px';
+  myValue1.parentElement.style.top = myRange1.offsetHeight + 'px';
+  myValue1.innerHTML = myRange1.value + ' ' + myUnits1;
+
+  myRange1.oninput =function(){
+    let px1 = ((myRange1.valueAsNumber - parseInt(myRange1.min)) * off) - (myValue1.offsetWidth / 2);
+    myValue1.innerHTML = myRange1.value + ' ' + myUnits1;
+    myValue1.parentElement.style.left = px1 + 'px';
+  };
+							</script>
+							
+							<br>
+							<br>
+							Lower Blood pressure threshold
+							<div style="position:relative; margin:auto; width:90%">
+							<span style="position:absolute; color:red; border:1px solid blue; min-width:100px;">
+							<span id="myValue2"></span>
+							</span>
+							<input type="range" id="myRange2" max="90" min="0" style="width:80%"> 
+							</div>
+
+							<script type="text/javascript" charset="utf-8">
+var myRange2 = document.querySelector('#myRange2');
+var myValue2= document.querySelector('#myValue2');
+var myUnits2 = 'mm Hg';
+var off2 = myRange2.offsetWidth / (parseInt(myRange2.max) - parseInt(myRange2.min));
+var px2 =  ((myRange2.valueAsNumber - parseInt(myRange2.min)) * off2) - (myValue2.offsetParent.offsetWidth / 2);
+
+  myValue2.parentElement.style.left = px2 + 'px';
+  myValue2.parentElement.style.top = myRange2.offsetHeight + 'px';
+  myValue2.innerHTML = myRange2.value + ' ' + myUnits2;
+
+  myRange2.oninput =function(){
+    let px2 = ((myRange2.valueAsNumber - parseInt(myRange2.min)) * off) - (myValue2.offsetWidth / 2);
+    myValue2.innerHTML = myRange2.value + ' ' + myUnits2;
+    myValue2.parentElement.style.left = px2 + 'px';
+  };
+							</script>
+							
+							<br>
+							<br>
+							Body Temperature
+							<div style="position:relative; margin:auto; width:90%">
+							<span style="position:absolute; color:red; border:1px solid blue; min-width:100px;">
+							<span id="myValue3"></span>
+							</span>
+							<input type="range" id="myRange3" max="45" min="0" style="width:80%"> 
+							</div>
+
+							<script type="text/javascript" charset="utf-8">
+var myRange3 = document.querySelector('#myRange3');
+var myValue3= document.querySelector('#myValue3');
+var myUnits3 = 'C&deg;';
+var off3 = myRange3.offsetWidth / (parseInt(myRange3.max) - parseInt(myRange3.min));
+var px3 =  ((myRange3.valueAsNumber - parseInt(myRange3.min)) * off3) - (myValue3.offsetParent.offsetWidth / 2);
+
+  myValue3.parentElement.style.left = px3 + 'px';
+  myValue3.parentElement.style.top = myRange3.offsetHeight + 'px';
+  myValue3.innerHTML = myRange3.value + ' ' + myUnits3;
+
+  myRange3.oninput =function(){
+    let px3 = ((myRange3.valueAsNumber - parseInt(myRange3.min)) * off) - (myValue3.offsetWidth / 2);
+    myValue3.innerHTML = myRange3.value + ' ' + myUnits3;
+    myValue3.parentElement.style.left = px3 + 'px';
+  };
+							</script>
+							<br>
+							<br>
+						</div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-4 -->
+
+				<div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+						Overview
+                        </div>
+                        <div class="panel-body">
+						<p>
+						Current overview period:<br>
+						<button type="button" class="btn btn-primary">Never</button>
+						</p>
+						<p>
+						Choose when you want to receive your overview:
+                        <button type="button" class="btn btn-primary">Daily</button>
+						<button type="button" class="btn btn-primary">Weekly</button>
+						<button type="button" class="btn btn-primary">Monthly</button>
+						<button type="button" class="btn btn-primary">Yearly</button>
+						<button type="button" class="btn btn-primary">Never</button>
+						</p>
+						<br>
+						<button type="button" class="btn btn-primary btn-lg btn-block">Receive overview now</button>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-4 -->
+				
+			</div>
+      </div>
     <!-- /#wrapper -->
 
     <!-- jQuery -->
@@ -220,5 +362,4 @@
     <script src="../dist/js/sb-admin-2.js"></script>
 
 </body>
-
 </html>
