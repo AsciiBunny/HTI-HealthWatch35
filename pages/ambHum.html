@@ -61,7 +61,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <i class="fa fa-comment fa-fw"></i> Heart Rate
+                                    <i class="fa fa-comment fa-fw"></i> Heart rate
                                     <span class="pull-right text-muted small">Dangerously low, call 911!</span>
                                 </div>
                             </a>
@@ -111,7 +111,7 @@
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
-                        <li><a href="Settings.html"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -181,12 +181,40 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Body Temperature</h1>
+                    <h1 class="page-header">Ambient Humidity</h1>
                 </div>
                 <!-- /.col-lg-12 -->
+				<div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Ambient humidity in % vs time
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="flot-chart">
+                                <div class="flot-chart-content" id="flot-line-chart-moving"></div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+				<!-- /.col-lg-6 -->
+				<div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Current ambient humidity
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <h1>62.4 %</h1>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
             </div>
-			<IMG SRC="../Images/Thermometer.png" ALT="some text" WIDTH=50 HEIGHT=200>
-			<H2>37&deg;</H2>
+
         </div>
         <!-- /#page-wrapper -->
 
