@@ -114,7 +114,7 @@
                         <li><a href="Settings.html"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="../oldpages/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -129,49 +129,35 @@
                         <li>
                             <a style="color:#333"><img src="user.jpg" alt="User Picture" style="width: 50px; height: 50px;"> Harry Blonder</a>
                         </li>
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>
                         <li>
                             <a href="home.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="TimeDate.html"><i class="fa fa-bar-chart-o fa-fw"></i> Time and Date<span class="fa fa-plus"></span></a>
-                            <!-- /.nav-second-level -->
+                            <a href="TimeDate.html"><i class="fa fa-bar-chart-o fa-fw"></i> Time and Date</a>
                         </li>
                         <li>
-                            <a href="HeartRate.html"><i class="fa fa-table fa-fw"></i> Heart Rate<span class="fa fa-plus"></span></a>
+                            <a href="heartRate.html"><i class="fa fa-table fa-fw"></i> Heart Rate</a>
                         </li>
                         <li>
-                            <a href="BodyTemp.html"><i class="fa fa-edit fa-fw"></i> Body Temperature<span class="fa fa-plus"></span></a>
+                            <a href="BodyTemp.html"><i class="fa fa-edit fa-fw"></i> Body Temperature</a>
                         </li>
                         <li>
-                            <a href="AmbTemp.html"><i class="fa fa-wrench fa-fw"></i> Ambient Temperature<span class="fa fa-plus"></span></a
-                            <!-- /.nav-second-level -->
+                            <a href="AmbTemp.html"><i class="fa fa-wrench fa-fw"></i> Ambient Temperature</a>
                         </li>
                         <li>
-                            <a href="bloodPress.html"><i class="fa fa-sitemap fa-fw"></i> Blood Pressure<span class="fa fa-plus"></span></a>
-                                    <!-- /.nav-third-level -->
-						</li>
-						<li>
-                            <a href="skinCond.html"><i class="fa fa-dashboard fa-fw"></i> Skin Conductivity<span class="fa fa-plus"></span></a>
+                            <a href="bloodPress.html"><i class="fa fa-sitemap fa-fw"></i> Blood Pressure</a>
                         </li>
-						<li>
-                            <a href="location.html"><i class="fa fa-dashboard fa-fw"></i> Location<span class="fa fa-plus"></span></a>
+                        <li>
+                            <a href="skinCond.html"><i class="fa fa-dashboard fa-fw"></i> Skin Conductivity</a>
                         </li>
-						<li>
-                            <a href="ambHum.html"><i class="fa fa-dashboard fa-fw"></i> Ambient Humidity<span class="fa fa-plus"></span></a>
+                        <li>
+                            <a href="location.html"><i class="fa fa-dashboard fa-fw"></i> Location</a>
                         </li>
+                        <li>
+                            <a href="ambHum.html"><i class="fa fa-dashboard fa-fw"></i> Ambient Humidity</a>
+                        </li>
+                    </ul>
                 </div>
-                <!-- /.sidebar-collapse -->
             </div>
             <!-- /.navbar-static-side -->
         </nav>
@@ -182,37 +168,41 @@
                     <h1 class="page-header">Heart Rate</h1>
                 </div>
                 <!-- /.col-lg-12 -->
-				<div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Current heart rate
-                        </div>
-                        <div class="panel-body">
-						 Shows current value
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-4 -->
-				 <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Heart rate in BPM
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-line-chart-moving"></div>
+
+                <div class="same-height">
+                     <div class="col-lg-8">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Heart rate in BPM
                             </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="flot-chart">
+                                    <div class="flot-chart-content" id="flot-line-hearth-rate"></div>
+                                </div>
+                            </div>
+                            <!-- /.panel-body -->
                         </div>
-                        <!-- /.panel-body -->
+                        <!-- /.panel -->
                     </div>
-                    <!-- /.panel -->
+                    <!-- /.col-lg-6 -->
+
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Current heart rate
+                            </div>
+                            <div class="panel-body">
+                                Relevant information will go here
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-4 -->
                 </div>
-				<!-- /.col-lg-6 -->
-			
-				<div class="col-lg-12">
+
+                <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Heart rate in BPM over a longer period of time
@@ -228,9 +218,7 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-12 -->
-            
             </div>
-
         </div>
         <!-- /#page-wrapper -->
 

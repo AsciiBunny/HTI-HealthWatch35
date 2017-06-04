@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="TU Eindhoven - HTI - Group 35">
 
-    <title>Home - HealthWatch 35</title>
+    <title>Dashboard - HealthWatch 35</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -114,7 +114,7 @@
                         <li><a href="Settings.html"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="../oldpages/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -129,53 +129,36 @@
                         <li>
                             <a style="color:#333"><img src="user.jpg" alt="User Picture" style="width: 50px; height: 50px;"> Harry Blonder</a>
                         </li>
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>
                         <li>
                             <a href="home.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="TimeDate.html"><i class="fa fa-bar-chart-o fa-fw"></i> Time and Date<span class="fa fa-plus"></span></a>
-                            <!-- /.nav-second-level -->
+                            <a href="TimeDate.html"><i class="fa fa-bar-chart-o fa-fw"></i> Time and Date<span class="fa fa-plus" title="Show on Dashboard"/></a>
                         </li>
                         <li>
-
-                            <a href="heartRate.html"><i class="fa fa-table fa-fw"></i> Heart Rate<span class="fa fa-plus"></span></a>
-
+                            <a href="heartRate.html"><i class="fa fa-table fa-fw"></i> Heart Rate<span class="fa fa-plus" style="color: grey" title="This is already on your dashboard"/></a>
                         </li>
                         <li>
-                            <a href="BodyTemp.html"><i class="fa fa-edit fa-fw"></i> Body Temperature<span class="fa fa-plus"></span></a>
+                            <a href="BodyTemp.html"><i class="fa fa-edit fa-fw"></i> Body Temperature<span class="fa fa-plus" style="color: grey" title="This is already on your dashboard"/></a>
                         </li>
                         <li>
-                            <a href="AmbTemp.html"><i class="fa fa-wrench fa-fw"></i> Ambient Temperature<span class="fa fa-plus"></span></a
-                            <!-- /.nav-second-level -->
+                            <a href="AmbTemp.html"><i class="fa fa-wrench fa-fw"></i> Ambient Temperature<span class="fa fa-plus" style="color: grey" title="This is already on your dashboard"/></a>
                         </li>
                         <li>
-                            <a href="bloodPress.html"><i class="fa fa-sitemap fa-fw"></i> Blood Pressure<span class="fa fa-plus"></span></a>
-                                    <!-- /.nav-third-level -->
+                            <a href="bloodPress.html"><i class="fa fa-sitemap fa-fw"></i> Blood Pressure<span class="fa fa-plus" style="color: grey" title="This is already on your dashboard"/></a>
 						</li>
 						<li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Skin Conductivity<span class="fa fa-plus"></span></a>
+                            <a href="skinCond.html"><i class="fa fa-dashboard fa-fw"></i> Skin Conductivity<span class="fa fa-plus" style="color: grey" title="This is already on your dashboard"/></a>
                         </li>
 						<li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Location<span class="fa fa-plus"></span></a>
+                            <a href="location.html"><i class="fa fa-dashboard fa-fw"></i> Location<span class="fa fa-plus" title="Show on Dashboard"/></a>
                         </li>
 						<li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Ambient Humidity<span class="fa fa-plus"></span></a>
+                            <a href="ambHum.html"><i class="fa fa-dashboard fa-fw"></i> Ambient Humidity<span class="fa fa-plus" title="Show on Dashboard"/></a>
                         </li>
+                    </ul>
                 </div>
-                <!-- /.sidebar-collapse -->
             </div>
-            <!-- /.navbar-static-side -->
         </nav>
 
         <div id="page-wrapper">
@@ -188,20 +171,89 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Heart rate in BPM
+                            <a class="pull-right" title="Remove this panel from the dashboard"><i class="fa fa-times" aria-hidden="true"></i></a>
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-line-chart-moving"></div>
+                            <div class="flot-chart" style="height: auto;" >
+                                <div class="flot-chart-content" id="flot-line-hearth-rate-small" style="height: 300px"></div>
                             </div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
                 </div>
-				<!-- /.col-lg-6 -->
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-3" style="text-align: center">
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Body Temperature
+                            <a class="pull-right" title="Remove this panel from the dashboard"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <img src="../Images/Thermometer.png" alt="some text" width==50 height=236>
+                            <h2>37&deg;</h2>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                        <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-3 -->
+                <div class="col-lg-3" style="text-align: center">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Ambient Temperature
+                            <a class="pull-right" title="Remove this panel from the dashboard"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <img src="../Images/Thermometer.png" alt="some text" width==50 height=236>
+                            <h2>21&deg;</h2>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-3 -->
             </div>
-            <H1>Empty</H1>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Blood Pressure
+                            <a class="pull-right" title="Remove this panel from the dashboard"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="flot-chart" style="height: auto;">
+                                <div class="flot-chart-content" id="flot-line-blood-pressure-small" style="height: 300px"></div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Skin Conductivity
+                            <a class="pull-right" title="Remove this panel from the dashboard"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="flot-chart" style="height: auto;">
+                                <div class="flot-chart-content" id="flot-line-skin-conductivity-small" style="height: 300px"></div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
 

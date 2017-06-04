@@ -114,7 +114,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="../oldpages/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -129,51 +129,35 @@
                         <li>
                             <a style="color:#333"><img src="user.jpg" alt="User Picture" style="width: 50px; height: 50px;"> Harry Blonder</a>
                         </li>
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>
                         <li>
                             <a href="home.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="TimeDate.html"><i class="fa fa-bar-chart-o fa-fw"></i> Time and Date<span class="fa fa-plus"></span></a>
-                            <!-- /.nav-second-level -->
+                            <a href="TimeDate.html"><i class="fa fa-bar-chart-o fa-fw"></i> Time and Date</a>
                         </li>
                         <li>
-
-                            <a href="heartRate.html"><i class="fa fa-table fa-fw"></i> Heart Rate<span class="fa fa-plus"></span></a>
-
+                            <a href="heartRate.html"><i class="fa fa-table fa-fw"></i> Heart Rate</a>
                         </li>
                         <li>
-                            <a href="BodyTemp.html"><i class="fa fa-edit fa-fw"></i> Body Temperature<span class="fa fa-plus"></span></a>
+                            <a href="BodyTemp.html"><i class="fa fa-edit fa-fw"></i> Body Temperature</a>
                         </li>
                         <li>
-                            <a href="AmbTemp.html"><i class="fa fa-wrench fa-fw"></i> Ambient Temperature<span class="fa fa-plus"></span></a
-                            <!-- /.nav-second-level -->
+                            <a href="AmbTemp.html"><i class="fa fa-wrench fa-fw"></i> Ambient Temperature</a>
                         </li>
                         <li>
-                            <a href="bloodPress.html"><i class="fa fa-sitemap fa-fw"></i> Blood Pressure<span class="fa fa-plus"></span></a>
-                                    <!-- /.nav-third-level -->
-						</li>
-						<li>
-                            <a href="skinCond.html"><i class="fa fa-dashboard fa-fw"></i> Skin Conductivity<span class="fa fa-plus"></span></a>
+                            <a href="bloodPress.html"><i class="fa fa-sitemap fa-fw"></i> Blood Pressure</a>
                         </li>
-						<li>
-                            <a href="location.html"><i class="fa fa-dashboard fa-fw"></i> Location<span class="fa fa-plus"></span></a>
+                        <li>
+                            <a href="skinCond.html"><i class="fa fa-dashboard fa-fw"></i> Skin Conductivity</a>
                         </li>
-						<li>
-                            <a href="ambHum.html"><i class="fa fa-dashboard fa-fw"></i> Ambient Humidity<span class="fa fa-plus"></span></a>
+                        <li>
+                            <a href="location.html"><i class="fa fa-dashboard fa-fw"></i> Location</a>
                         </li>
+                        <li>
+                            <a href="ambHum.html"><i class="fa fa-dashboard fa-fw"></i> Ambient Humidity</a>
+                        </li>
+                    </ul>
                 </div>
-                <!-- /.sidebar-collapse -->
             </div>
             <!-- /.navbar-static-side -->
         </nav>
@@ -190,8 +174,23 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <IMG SRC="C:\Users\s157888\Dropbox\HTI\Design Assignment\location.PNG" ALT="some text">
-
+                            <div id="map" style="height: 400px;"></div>
+                            <script>
+                                function initMap() {
+                                    var uluru = {lat: -25.363, lng: 131.044};
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 4,
+                                        center: uluru
+                                    });
+                                    var marker = new google.maps.Marker({
+                                        position: uluru,
+                                        map: map
+                                    });
+                                }
+                            </script>
+                            <script async defer
+                                    src="https://maps.googleapis.com/maps/api/js?key= AIzaSyASGidXfvVVgoe04rllqTHtsckx_tH6f3g&callback=initMap">
+                            </script>
                         </div>
                         <!-- /.panel-body -->
                     </div>
